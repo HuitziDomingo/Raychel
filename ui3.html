@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <title>Raychel UI3</title>
+    <link rel="stylesheet" href="css/listefi.css"/>
+    <link rel="stylesheet" href="css/raychel.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+    <link rel="stylesheet" href="css/fonts/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body class="body-mgtop">
+  <!---Encabezado del sitio.-->
+  <header class="gd-100 header-board">
+      <div class="btn-menu gd-10 gd-m-30">
+          <button class="btn phantom-white" id="btnMenu">
+            <span class="icon-bars"></span>
+          </button>
+      </div>
+      <div class="logo gd-90 gd-m-70">
+          <a href="#"><h4 class="fnt-white tx-center">Raychel</h4></a>
+      </div>
+  </header>
+    <!---contenedor principal del menu y del sitio.-->
+    <div class="container cont-1400">
+      <!---contenedor principal del menu.-->
+      <nav class="navigation" id="contMenu" data-state="open">
+            <ul class="bx-center">
+                <li class="btn-material">
+                    <a href="#"><span class="icon-home fnt-white pd-few"> <span class="roboto">Inicio</span></span></a>
+                </li>
+                <li class="btn-material">
+                    <a href="#"><span class="icon-fort-awesome fnt-white pd-few"> <span class="roboto"> Producto</span></span></a>
+                </li>
+                <li class="btn-material">
+                    <a href="#"><span class="icon-search fnt-white pd-few"> <span class="roboto">Contacto</span></span></a>
+                </li>
+            </ul>
+        </nav>
+      <!---contenedor principal del sitio.-->
+      <div class="cont-main" id="contMain" data-state="open">
+        <!---Fuentes-->
+        <div class="mg-sec container">
+            <h1 class="tx-left fnt-black" id="the-top">Sed cursus turpis vitae tortor H1.</h1>
+            <h2 class="tx-left fnt-black">Aenean tellus metus H2.</h2>
+            <h3 class="tx-left fnt-black">Donec elit libero H3.</h3>
+            <h4 class="tx-left fnt-black">Fusce id purus H4.</h4>
+            <h5 class="tx-left fnt-black">Ut varius tincidunt libero H5.</h5>
+            <h6 class="tx-left fnt-black"> Maecenas vestibulum mollis H6.</h6>
+            <p class="tx-left smoove-event">Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.</p>
+            <p class="tx-left smoove-event">Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.</p>
+            <p class="tx-left smoove-event">Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</p>
+
+            <p class="tx-left smoove-event">Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</p>
+        </div>
+		<!---Formulario con Rachel-->
+        <div class="mg-sec">
+            <form class="cont-600 container"  method="post" action="" enctype="multipart/form-data">
+                <h3 class="tx-left">Formulario para visualizar archivos.</h3>
+                <p class="tx-left">Tipo de Formulario Naranja</p>
+                <div class="cont-input">
+                    <input type="file" class="input-material" required id="visorInput"/>
+                    <span class="highlight highlight-orange"></span>
+                    <span class="bar bar-orange"></span>
+                    <label class="orange label-material"></label>
+                </div>
+					<div id="visor" class="tx-center cont-600">
+
+					</div>
+                <button class="btn-material bx-left orange-material" type="submit" id="form1"><span>Enviar</span></button>
+            </form>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!---Sripts de programacion.-->
+	<script src="js/listefi.js"></script>
+	<script src="js/raychel.js"></script>
+	<script>
+    	raychel.menuOffCanvas();
+		raychel.visor({
+			visorInput: '#visorInput',
+			visor: '#visor',
+			exp: /(.pdf|.png|.jpeg|.jpg)$/i,
+			messageError: '<p class="tx-center fnt-black">Error en el tipo de archivo</p>',
+			messageErrorTitle: 'Error',
+			width: 400,
+			height: 400,
+		});
+	</script>
+</body>
+
+</html>
